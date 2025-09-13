@@ -1,20 +1,29 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Interactive Diagram Studio with Secure Authentication and Version Control
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+An *enterprise-grade diagramming and workflow modeling platform* built with *Angular* and *.NET Core Web API*.  
+The platform enables users to *create, style, and manage diagrams* with a drag-and-drop interface, *secure authentication (MSAL + Azure AD), and complete **version history*.  
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+![WhatsApp Image 2025-09-12 at 6 54 05 PM (3)](https://github.com/user-attachments/assets/4ac6d43f-111a-4998-be7e-a824e1324533)
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+## 🚀 Features
+- 🔐 *Enterprise-Grade Security*: MSAL + Azure AD authentication for secure access control.
+- 🎨 *Interactive Diagram Studio*: Drag-and-drop canvas with shapes, connectors, colors, and styling.
+- 🗂️ *Version Control*: Save, load, and restore multiple versions of diagrams.
+- 📝 *Full CRUD Support*: Create, retrieve, update, and delete diagrams and templates.
+- 📊 *Dashboard*: Predefined templates and recent projects displayed as interactive cards.
+- ☁️ *Cloud-Ready Architecture*: Modular frontend-backend design for scalability and Azure deployment.
+
+---
+
+## 🛠️ Tech Stack
+| Layer                | Technologies Used                          |
+|----------------------|-------------------------------------------|
+| *Frontend*         | Angular, TypeScript, SCSS                 |
+| *Backend*          | .NET Core Web API, C#                     |
+| *Authentication*   | Microsoft Authentication Library (MSAL), Azure AD |
+| *Database*         | SQL Server                                |
+| *Cloud/Infra*      | Azure Services                            |
+| *Version Control*  | Git, GitHub                               |
+
+---

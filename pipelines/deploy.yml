@@ -1,0 +1,28 @@
+trigger:
+- main  # or your branch name
+ 
+pool:
+  vmImage: ubuntu-latest
+ 
+ 
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '22.x'
+  displayName: 'Install Node.js'
+ 
+- script: |
+    npm install -g @angular/cli
+    npm install
+    ng build 
+  displayName: 'Install Dependencies & Build Angular App'
+  workingDirectory: '$(System.DefaultWorkingDirectory)/UI'
+ 
+- task: AzureStaticWebApp@0
+  inputs:
+    azureSubscription: 'Devops'
+    app_location: 'UI'                         # Root of your Angular app
+    output_location: 'dist/jointing/browser'    # Adjust to match your actual dist folder name
+    azure_static_web_apps_api_token: '6fbeea2ab52a4f47deb6c3ffc74c1e46b859546bffe1476a500534650f86917906-b49863a0-2965-4fea-82c3-e9243bb17db900306250d0431703'
+  displayName: 'Deploy to Azure Static Web Apps'
+ 

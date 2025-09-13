@@ -1,0 +1,63 @@
+<div class="zoom-controls">
+  <div class="zoom-level">{{ zoomLevel }}%</div>
+
+  <button class="zoom-btn zoom-in-btn" (click)="onZoomIn()" title="Zoom In">
+    +
+  </button>
+
+  <button class="zoom-btn zoom-out-btn" (click)="onZoomOut()" title="Zoom Out">
+    −
+  </button>
+
+  <button
+    class="zoom-btn reset-btn"
+    (click)="onResetZoom()"
+    title="Reset Zoom (100%)"
+  >
+    ⛶
+  </button>
+  <button class="action-btn undo-btn" (click)="onUndo()" title="Undo">
+    ↩️
+  </button>
+
+  <button class="action-btn redo-btn" (click)="onRedo()" title="Redo">
+    ↪️
+  </button>
+
+  <div class="divider"></div>
+
+  <button class="action-btn clear-btn" (click)="onClear()" title="Clear Canvas">
+    🗑️
+  </button>
+
+  <button
+    class="action-btn export-btn"
+    (click)="onExport()"
+    title="Export Graph"
+  >
+    📁
+  </button>
+
+  <!-- <button 
+  class="action-btn import-btn"
+  (click)="onImport()"
+  title="Import Graph">
+  📂
+</button> -->
+
+  <input
+    type="file"
+    #fileInput
+    accept=".json"
+    style="display: none"
+    (change)="handleFileInput($event)"
+  />
+
+  <button
+    class="action-btn import-btn"
+    (click)="fileInput.click()"
+    title="Import Graph"
+  >
+    📂
+  </button>
+</div>

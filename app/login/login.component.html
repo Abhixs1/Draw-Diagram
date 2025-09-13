@@ -1,0 +1,20 @@
+<div class="hero-wrapper">
+  <mat-card class="hero-box" #heroBox>
+    <mat-card-content class="hero-content">
+      <h1 class="hero-heading">
+        Think inside the box.<br />
+        Then connect it.
+      </h1>
+      <p class="hero-subheading">Drowning in disconnected thoughts?</p>
+      <p class="hero-description">
+        Drop them onto a canvas. Visualize your logic clearly, connect the pieces,
+        one block at a time and export with zero friction.
+      </p>
+
+      <button class="hero-btn mat-raised-button" (click)="loginRedirect()" [disabled]="isLoggingIn">
+        <mat-icon>login</mat-icon>
+        Login
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

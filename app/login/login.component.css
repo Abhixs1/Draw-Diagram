@@ -1,0 +1,132 @@
+.hero-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 2rem;
+  background: white; /* base white bottom */
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background: linear-gradient(
+    45deg,
+    #a78bfa 0%,
+    #7f5af0 8%,
+    #60a5fa 16%,
+    #00bcd4 24%,
+    #3f51b5 30%,
+    #fbbf24 36%,
+    #ff4081 42%,
+    #f87171 48%,
+    #ff9100 54%,
+    #34d399 60%,
+    #00e676 66%,
+    #2979ff 72%,
+    #a78bfa 78%,
+    #e040fb 84%,
+    #60a5fa 88%,
+    #f50057 92%,
+    #00bfa5 96%,
+    #fbbf24 100%
+  );
+  background-size: 600% 600%;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  animation: stripeGradientMove 15s ease-in-out infinite;
+  z-index: 0;
+}
+
+
+@keyframes stripeGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 100%;
+  }
+  50% {
+    background-position: 200% 50%;
+  }
+  75% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes stripeGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Stripe-style box */
+.hero-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  max-width: 520px;
+  width: 100%;
+  padding: 3rem 4rem; 
+  z-index: 1;
+}
+
+/* Content inside box */
+.hero-content {
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 2rem;
+  font-weight: 800; /* bolder */
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.hero-subheading {
+  font-size: 1.1rem;
+  font-weight: 700; /* bolder */
+  color: #6b7280;
+  margin-bottom: 0.75rem; /* slightly tighter */
+}
+
+.hero-description {
+  font-size: 1.08rem;
+  font-weight: 600; /* slightly thicker */
+  color: #6b7280;
+  margin-bottom: 1.25rem; /* slightly tighter */
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem; 
+  background: #6366f1;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.3s ease;
+   font-size: 1.1rem; /* increased from default size */
+}
+
+.hero-btn:hover {
+  background: #4f46e5;
+}

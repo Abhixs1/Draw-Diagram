@@ -76,7 +76,7 @@ Built with **Angular**, **.NET (C#)**, **JointJS**, and deployed on **Azure**.
 ### Installation
 ```bash
 # Clone the repo
-git clone https://github.com/your-username/your-repo.git
+git clone [https://github.com/Abhixs1/Draw-Diagram]
 
 # Navigate to frontend
 cd frontend
@@ -87,9 +87,3 @@ ng serve
 cd backend
 dotnet restore
 dotnet run
----
-
-
-
-
-

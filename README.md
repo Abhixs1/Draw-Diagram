@@ -1,44 +1,36 @@
-🚀 Diagram Studio with Secure Authentication and Version Control
+# 🚀 Diagram Studio with Secure Authentication and Version Control
 
-An enterprise-ready web application for creating, managing, and version-controlling diagrams.
-Built with Angular, .NET (C#), JointJS, and deployed on Azure.
+An enterprise-ready web application for creating, managing, and version-controlling diagrams.  
+Built with **Angular**, **.NET (C#)**, **JointJS**, and deployed on **Azure**.
 
-✨ Key Features
-🔐 Secure Authentication
+---
 
-Integrated Microsoft Authentication Library (MSAL) for enterprise-level login and user identity management.
+## ✨ Key Features
 
-Supports Azure AD for secure access control and session management.
+### 🔐 Secure Authentication
+- Integrated **Microsoft Authentication Library (MSAL)** for enterprise-level login and user identity management.  
+- Supports **Azure AD** for secure access control and session management.  
 
-🎨 Interactive Diagram Studio
+### 🎨 Interactive Diagram Studio
+- Fully functional **drag-and-drop canvas** for creating diagrams, flowcharts, and workflows.  
+- Rich customization with **shapes, connectors, colors, text labels, and styling tools**.  
+- Intuitive studio design for a seamless user experience.  
 
-Fully functional drag-and-drop canvas for creating diagrams, flowcharts, and workflows.
+### 🗂️ Advanced Version Control
+- Each diagram supports **multiple versions with full history tracking**.  
+- Save, load, and rollback diagrams to previous versions easily.  
+- Secure diagram storage in **SQL database**.  
 
-Rich customization with shapes, connectors, colors, text labels, and styling tools.
+### 📝 Diagram and Template Management
+- Full **CRUD operations** (Create, Read, Update, Delete) for diagrams and templates.  
+- **Home dashboard** with interactive cards for quick access to saved projects and templates.  
 
-Intuitive studio design for a seamless user experience.
+### 📈 Scalability & Architecture
+- **Frontend-Backend separation** with REST APIs for modularity.  
+- Designed for **cloud deployment on Azure** ensuring performance and scalability.  
+- Clean, maintainable codebase following **industry best practices**.  
 
-🗂️ Advanced Version Control
-
-Each diagram supports multiple versions with full history tracking.
-
-Save, load, and rollback diagrams to previous versions easily.
-
-Secure diagram storage in SQL database.
-
-📝 Diagram and Template Management
-
-Full CRUD operations (Create, Read, Update, Delete) for diagrams and templates.
-
-Home dashboard with interactive cards for quick access to saved projects and templates.
-
-📈 Scalability & Architecture
-
-Frontend-Backend separation with REST APIs for modularity.
-
-Designed for cloud deployment on Azure ensuring performance and scalability.
-
-Clean, maintainable codebase following industry best practices.
+---
 
 ![WhatsApp Image 2025-09-12 at 6 54 05 PM](https://github.com/user-attachments/assets/63e0a14a-ec75-48b5-9ee1-f1fb22e81b20)
 
@@ -65,16 +57,38 @@ Clean, maintainable codebase following industry best practices.
 ---
 
 ## 🛠️ Tech Stack
-| Layer                | Technologies Used                          |
-|----------------------|-------------------------------------------|
-| *Frontend*         | Angular, TypeScript, SCSS                 |
-| *Backend*          | .NET Core Web API, C#                     |
-| *Authentication*   | Microsoft Authentication Library (MSAL), Azure AD |
-| *Database*         | SQL Server                                |
-| *Cloud/Infra*      | Azure Services                            |
-| *Version Control*  | Git, GitHub                               |
+- **Frontend:** Angular, JointJS  
+- **Backend:** .NET (C#), REST APIs  
+- **Authentication:** Microsoft Authentication Library (MSAL), Azure AD  
+- **Database:** SQL  
+- **Deployment:** Azure, Docker  
 
 ---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js & Angular CLI  
+- .NET SDK  
+- SQL Server  
+- Azure AD app registration  
+
+### Installation
+```bash
+# Clone the repo
+git clone https://github.com/your-username/your-repo.git
+
+# Navigate to frontend
+cd frontend
+npm install
+ng serve
+
+# Navigate to backend
+cd backend
+dotnet restore
+dotnet run
+---
+
 
 
 

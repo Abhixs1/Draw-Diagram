@@ -1,7 +1,51 @@
 # Interactive Diagram Studio with Secure Authentication and Version Control
 
-An *enterprise-grade diagramming and workflow modeling platform* built with *Angular* and *.NET Core Web API*.  
-The platform enables users to *create, style, and manage diagrams* with a drag-and-drop interface, *secure authentication (MSAL + Azure AD), and complete **version history*.  
+An enterprise-grade diagramming and workflow modeling platform built with Angular (frontend) and .NET Core Web API (backend). The platform enables users to create, style, and manage interactive diagrams with a drag-and-drop interface, robust version control, and secure authentication via Azure Active Directory (MSAL).
+
+Designed with a scalable architecture and intuitive UI, this project demonstrates expertise in full-stack development, frontend engineering, backend API design, and cloud-based authentication systems.
+
+🚀 Key Features
+
+🔐 Secure Authentication
+
+Integrated Microsoft Authentication Library (MSAL) for enterprise-level login and user identity management.
+
+Supports Azure AD for secure access control and session management.
+
+
+🎨 Interactive Diagram Studio
+
+Fully functional drag-and-drop canvas to create diagrams, flowcharts, and workflows.
+
+Rich customization: shapes, connectors, colors, text labels, and styling tools.
+
+Intuitive studio design for a seamless user experience.
+
+
+🗂️ Advanced Version Control
+
+Each diagram supports multiple versions with full history tracking.
+
+Save, load, and rollback diagrams to previous versions easily.
+
+Diagrams and their versions are securely stored in a SQL database.
+
+
+📝 Diagram and Template Management
+
+Supports full CRUD operations (Create, Read, Update, Delete) for diagrams and templates.
+
+Home dashboard with interactive cards for quick access to saved projects and predefined templates.
+
+
+📈 Scalability & Architecture
+
+Frontend-Backend separation with REST APIs for modularity.
+
+Designed for cloud deployment on Azure, ensuring performance and scalability.
+
+Clean, maintainable codebase following industry best practices.
+
 ![WhatsApp Image 2025-09-12 at 6 54 05 PM](https://github.com/user-attachments/assets/63e0a14a-ec75-48b5-9ee1-f1fb22e81b20)
 
 ![WhatsApp Image 2025-09-12 at 6 54 05 PM (1)](https://github.com/user-attachments/assets/d2b373d2-2fbb-4e7f-b62e-b210e627f588)
@@ -37,5 +81,6 @@ The platform enables users to *create, style, and manage diagrams* with a drag-a
 | *Version Control*  | Git, GitHub                               |
 
 ---
+
 
 

@@ -1,0 +1,127 @@
+/* src/app/components/zoom-controls/zoom-controls.component.css */
+.zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+.zoom-level {
+  font-size: 12px;
+  font-weight: 500;
+  color: #24292e;
+  min-width: 40px;
+  text-align: center;
+  background: #f6f8fa;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5da;
+}
+
+.zoom-btn, .action-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #d1d5da;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #24292e;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.zoom-btn:hover, .action-btn:hover {
+  background: #f6f8fa;
+  border-color: #0969da;
+  color: #0969da;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-btn:active, .action-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.zoom-in-btn {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.zoom-out-btn {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.fit-btn {
+  font-size: 14px;
+}
+
+.reset-btn {
+  font-size: 16px;
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: #e1e4e8;
+  margin: 0 4px;
+}
+
+.action-btn {
+  font-size: 14px;
+}
+
+.clear-btn:hover {
+  background: #fff5f5;
+  border-color: #da3633;
+  color: #da3633;
+}
+
+.export-btn:hover {
+  background: #f0f9ff;
+  border-color: #0969da;
+  color: #0969da;
+}
+
+.import-btn:hover {
+  background: #f6ffed;
+  border-color: #52c41a;
+  color: #52c41a;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .zoom-controls {
+    bottom: 10px;
+    right: 10px;
+    padding: 6px 8px;
+    gap: 6px;
+  }
+
+  .zoom-btn, .action-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .zoom-level {
+    font-size: 11px;
+    min-width: 35px;
+    padding: 3px 6px;
+  }
+}

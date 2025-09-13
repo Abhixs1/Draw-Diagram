@@ -1,0 +1,170 @@
+    <div class="properties-panel">
+      <div class="panel-header">
+        <h3 class="panel-title">Properties</h3>
+      </div>
+      
+      <div class="panel-content" *ngIf="selectedElement; else noSelection">
+
+        <div class="property-section">
+          <h4 class="section-title">Appearance</h4>
+          
+          <div class="property-group">
+            <label class="property-label">Fill Color</label>
+            <div class="color-input-group">
+              <input 
+                type="color" 
+                class="color-input"
+                [(ngModel)]="properties.fill"
+                (ngModelChange)="onPropertyChange('fill', $event)">
+              <input 
+                type="text" 
+                class="color-text-input"
+                [(ngModel)]="properties.fill"
+                (ngModelChange)="onPropertyChange('fill', $event)">
+            </div>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Outline Color</label>
+            <div class="color-input-group">
+              <input 
+                type="color" 
+                class="color-input"
+                [(ngModel)]="properties.outline"
+                (ngModelChange)="onPropertyChange('outline', $event)">
+              <input 
+                type="text" 
+                class="color-text-input"
+                [(ngModel)]="properties.outline"
+                (ngModelChange)="onPropertyChange('outline', $event)">
+            </div>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Outline Thickness</label>
+            <div class="number-input-group">
+              <input 
+                type="range" 
+                class="range-input"
+                min="0" 
+                max="10" 
+                step="0.5"
+                [(ngModel)]="properties.outlineThickness"
+                (ngModelChange)="onPropertyChange('outlineThickness', $event)">
+              <input 
+                type="number" 
+                class="number-input"
+                min="0" 
+                max="10" 
+                step="0.5"
+                [(ngModel)]="properties.outlineThickness"
+                (ngModelChange)="onPropertyChange('outlineThickness', $event)">
+            </div>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Outline Style</label>
+            <select 
+              class="property-select"
+              [(ngModel)]="properties.outlineStyle"
+              (ngModelChange)="onPropertyChange('outlineStyle', $event)">
+              <option value="solid">Solid</option>
+              <option value="dashed">Dashed</option>
+              <option value="dotted">Dotted</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="property-section">
+          <h4 class="section-title">Text Formatting</h4>
+          
+          <div class="property-group">
+          <div class="property-group">
+          <label class="property-label">Text</label>
+          <input 
+            type="text" 
+            class="property-input"
+            [(ngModel)]="properties.text"
+            (ngModelChange)="onPropertyChange('text', $event)"
+            placeholder="Enter text">
+        </div>
+            <label class="property-label">Font Size</label>
+            <div class="number-input-group">
+              <input 
+                type="range" 
+                class="range-input"
+                min="8" 
+                max="48" 
+                step="1"
+                [(ngModel)]="properties.fontSize"
+                (ngModelChange)="onPropertyChange('fontSize', $event)">
+              <input 
+                type="number" 
+                class="number-input"
+                min="8" 
+                max="48"
+                [(ngModel)]="properties.fontSize"
+                (ngModelChange)="onPropertyChange('fontSize', $event)">
+            </div>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Font Family</label>
+            <select 
+              class="property-select"
+              [(ngModel)]="properties.fontFamily"
+              (ngModelChange)="onPropertyChange('fontFamily', $event)">
+              <option value="Arial">Arial</option>
+              <option value="Helvetica">Helvetica</option>
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Courier New">Courier New</option>
+            </select>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Font Weight</label>
+            <select 
+              class="property-select"
+              [(ngModel)]="properties.fontThickness"
+              (ngModelChange)="onPropertyChange('fontWeight', $event)">
+              <option value="normal">Normal</option>
+              <option value="bold">Bold</option>
+              <option value="lighter">Light</option>
+            </select>
+          </div>
+
+          <div class="property-group">
+            <label class="property-label">Text Color</label>
+            <div class="color-input-group">
+              <input 
+                type="color" 
+                class="color-input"
+                [(ngModel)]="properties.textColor"
+                (ngModelChange)="onPropertyChange('textColor', $event)">
+              <input 
+                type="text" 
+                class="color-text-input"
+                [(ngModel)]="properties.textColor"
+                (ngModelChange)="onPropertyChange('textColor', $event)">
+            </div>
+          </div>
+        </div>
+
+        <div class="property-section">
+          <button 
+            class="delete-button"
+            (click)="onDeleteElement()">
+            Delete Element
+          </button>
+        </div>
+      </div>
+
+      <ng-template #noSelection>
+        <div class="no-selection">
+          <div class="no-selection-icon">📄</div>
+          <p class="no-selection-text">Select an element to edit its properties</p>
+        </div>
+      </ng-template>
+    </div>

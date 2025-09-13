@@ -1,0 +1,410 @@
+{
+  "type": "flowchart",
+  "cells": [
+    {
+      "type": "standard.Ellipse",
+      "position": { "x": 100, "y": 50 },
+      "size": { "width": 120, "height": 60 },
+      "id": "startEvent",
+      "attrs": {
+        "body": { "fill": "#27AE60", "stroke": "#229954", "strokeWidth": 3 },
+        "label": { "text": "New Employee\nHired", "fill": "white", "fontSize": 12, "fontWeight": "bold" }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 50, "y": 150 },
+      "size": { "width": 140, "height": 80 },
+      "id": "hrPreparation",
+      "attrs": {
+        "body": { "fill": "#3498DB", "stroke": "#2980B9", "strokeWidth": 2 },
+        "label": { "text": "HR Preparation\n• Create employee file\n• Prepare workspace\n• Order equipment", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 250, "y": 150 },
+      "size": { "width": 140, "height": 80 },
+      "id": "itSetup",
+      "attrs": {
+        "body": { "fill": "#9B59B6", "stroke": "#8E44AD", "strokeWidth": 2 },
+        "label": { "text": "IT Setup\n• Create accounts\n• Configure systems\n• Security access", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": { "x": 130, "y": 280 },
+      "size": { "width": 100, "height": 80 },
+      "id": "equipmentReady",
+      "attrs": {
+        "body": { "fill": "#F39C12", "stroke": "#E67E22", "strokeWidth": 2, "refPoints": "0,10 10,0 20,10 10,20" },
+        "label": { "text": "Equipment\nReady?", "fontSize": 11, "fontWeight": "bold" }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 50, "y": 400 },
+      "size": { "width": 140, "height": 80 },
+      "id": "orderEquipment",
+      "attrs": {
+        "body": { "fill": "#E74C3C", "stroke": "#C0392B", "strokeWidth": 2 },
+        "label": { "text": "Order Missing\nEquipment\n• Submit request\n• Track delivery", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 300, "y": 280 },
+      "size": { "width": 140, "height": 80 },
+      "id": "firstDayPrep",
+      "attrs": {
+        "body": { "fill": "#16A085", "stroke": "#138D75", "strokeWidth": 2 },
+        "label": { "text": "First Day\nPreparation\n• Schedule meetings\n• Prepare materials", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 300, "y": 400 },
+      "size": { "width": 140, "height": 80 },
+      "id": "welcomeDay",
+      "attrs": {
+        "body": { "fill": "#2E86AB", "stroke": "#1A5276", "strokeWidth": 2 },
+        "label": { "text": "Welcome Day\n• Office tour\n• Meet team\n• Initial briefing", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 500, "y": 280 },
+      "size": { "width": 140, "height": 80 },
+      "id": "documentation",
+      "attrs": {
+        "body": { "fill": "#7D3C98", "stroke": "#6C3483", "strokeWidth": 2 },
+        "label": { "text": "Documentation\n• Employee handbook\n• Policies review\n• Sign agreements", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 500, "y": 400 },
+      "size": { "width": 140, "height": 80 },
+      "id": "training",
+      "attrs": {
+        "body": { "fill": "#D35400", "stroke": "#BA4A00", "strokeWidth": 2 },
+        "label": { "text": "Initial Training\n• Company overview\n• Role-specific training\n• Systems training", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": { "x": 520, "y": 520 },
+      "size": { "width": 100, "height": 80 },
+      "id": "trainingComplete",
+      "attrs": {
+        "body": { "fill": "#F39C12", "stroke": "#E67E22", "strokeWidth": 2, "refPoints": "0,10 10,0 20,10 10,20" },
+        "label": { "text": "Training\nComplete?", "fontSize": 11, "fontWeight": "bold" }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 300, "y": 520 },
+      "size": { "width": 140, "height": 80 },
+      "id": "additionalTraining",
+      "attrs": {
+        "body": { "fill": "#E67E22", "stroke": "#D35400", "strokeWidth": 2 },
+        "label": { "text": "Additional Training\n• Schedule sessions\n• Assign mentor\n• Set timeline", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 700, "y": 400 },
+      "size": { "width": 140, "height": 80 },
+      "id": "weekOneReview",
+      "attrs": {
+        "body": { "fill": "#8E44AD", "stroke": "#7D3C98", "strokeWidth": 2 },
+        "label": { "text": "Week 1 Review\n• Check progress\n• Address concerns\n• Feedback session", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 700, "y": 280 },
+      "size": { "width": 140, "height": 80 },
+      "id": "monthlyReview",
+      "attrs": {
+        "body": { "fill": "#2980B9", "stroke": "#1F618D", "strokeWidth": 2 },
+        "label": { "text": "30-Day Review\n• Performance eval\n• Goal setting\n• Integration check", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": { "x": 720, "y": 150 },
+      "size": { "width": 100, "height": 80 },
+      "id": "probationPass",
+      "attrs": {
+        "body": { "fill": "#F39C12", "stroke": "#E67E22", "strokeWidth": 2, "refPoints": "0,10 10,0 20,10 10,20" },
+        "label": { "text": "Probation\nPassed?", "fontSize": 11, "fontWeight": "bold" }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 500, "y": 50 },
+      "size": { "width": 140, "height": 80 },
+      "id": "probationExtension",
+      "attrs": {
+        "body": { "fill": "#E74C3C", "stroke": "#C0392B", "strokeWidth": 2 },
+        "label": { "text": "Probation Extension\n• Document issues\n• Create improvement\n  plan", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 900, "y": 150 },
+      "size": { "width": 140, "height": 80 },
+      "id": "fullEmployee",
+      "attrs": {
+        "body": { "fill": "#27AE60", "stroke": "#229954", "strokeWidth": 2 },
+        "label": { "text": "Full Employee\nStatus\n• Update records\n• Full benefits\n• Complete access", "fontSize": 10 }
+      }
+    },
+    {
+      "type": "standard.Ellipse",
+      "position": { "x": 920, "y": 280 },
+      "size": { "width": 120, "height": 60 },
+      "id": "endEvent",
+      "attrs": {
+        "body": { "fill": "#27AE60", "stroke": "#229954", "strokeWidth": 3 },
+        "label": { "text": "Onboarding\nComplete", "fill": "white", "fontSize": 12, "fontWeight": "bold" }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 50, "y": 650 },
+      "size": { "width": 200, "height": 100 },
+      "id": "processNotes",
+      "attrs": {
+        "body": { "fill": "#F8F9FA", "stroke": "#6C757D", "strokeDasharray": "5,5" },
+        "label": { "text": "PROCESS NOTES:\n• Timeline: 30-90 days\n• Key stakeholders: HR, IT, Manager\n• Success metrics: Employee satisfaction\n• Review points: Day 1, Week 1, Month 1", "fontSize": 9 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 280, "y": 650 },
+      "size": { "width": 200, "height": 100 },
+      "id": "responsibilities",
+      "attrs": {
+        "body": { "fill": "#F8F9FA", "stroke": "#6C757D", "strokeDasharray": "5,5" },
+        "label": { "text": "RESPONSIBILITIES:\n• HR: Documentation, compliance\n• IT: System access, equipment\n• Manager: Training, integration\n• Buddy: Daily support, guidance", "fontSize": 9 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 510, "y": 650 },
+      "size": { "width": 200, "height": 100 },
+      "id": "documentation2",
+      "attrs": {
+        "body": { "fill": "#F8F9FA", "stroke": "#6C757D", "strokeDasharray": "5,5" },
+        "label": { "text": "REQUIRED DOCUMENTS:\n• Employment contract\n• Tax forms (W-4)\n• Emergency contacts\n• Direct deposit info\n• Benefits enrollment", "fontSize": 9 }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": { "x": 740, "y": 650 },
+      "size": { "width": 200, "height": 100 },
+      "id": "systemsAccess",
+      "attrs": {
+        "body": { "fill": "#F8F9FA", "stroke": "#6C757D", "strokeDasharray": "5,5" },
+        "label": { "text": "SYSTEMS ACCESS:\n• Email account\n• Company intranet\n• Project management tools\n• Time tracking system\n• Department-specific software", "fontSize": 9 }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "startEvent" },
+      "target": { "id": "hrPreparation" },
+      "id": "flow1",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "startEvent" },
+      "target": { "id": "itSetup" },
+      "id": "flow2",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "hrPreparation" },
+      "target": { "id": "equipmentReady" },
+      "id": "flow3",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "itSetup" },
+      "target": { "id": "equipmentReady" },
+      "id": "flow4",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "equipmentReady" },
+      "target": { "id": "orderEquipment" },
+      "id": "flow5",
+      "attrs": {
+        "line": { "stroke": "#E74C3C", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "No", "fontSize": 10, "fill": "#E74C3C" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "equipmentReady" },
+      "target": { "id": "firstDayPrep" },
+      "id": "flow6",
+      "attrs": {
+        "line": { "stroke": "#27AE60", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "Yes", "fontSize": 10, "fill": "#27AE60" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "orderEquipment" },
+      "target": { "id": "equipmentReady" },
+      "id": "flow7",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "firstDayPrep" },
+      "target": { "id": "welcomeDay" },
+      "id": "flow8",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "firstDayPrep" },
+      "target": { "id": "documentation" },
+      "id": "flow9",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "welcomeDay" },
+      "target": { "id": "training" },
+      "id": "flow10",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "documentation" },
+      "target": { "id": "training" },
+      "id": "flow11",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "training" },
+      "target": { "id": "trainingComplete" },
+      "id": "flow12",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "trainingComplete" },
+      "target": { "id": "additionalTraining" },
+      "id": "flow13",
+      "attrs": {
+        "line": { "stroke": "#E74C3C", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "No", "fontSize": 10, "fill": "#E74C3C" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "trainingComplete" },
+      "target": { "id": "weekOneReview" },
+      "id": "flow14",
+      "attrs": {
+        "line": { "stroke": "#27AE60", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "Yes", "fontSize": 10, "fill": "#27AE60" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "additionalTraining" },
+      "target": { "id": "trainingComplete" },
+      "id": "flow15",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "weekOneReview" },
+      "target": { "id": "monthlyReview" },
+      "id": "flow16",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "monthlyReview" },
+      "target": { "id": "probationPass" },
+      "id": "flow17",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "probationPass" },
+      "target": { "id": "probationExtension" },
+      "id": "flow18",
+      "attrs": {
+        "line": { "stroke": "#E74C3C", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "No", "fontSize": 10, "fill": "#E74C3C" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "probationPass" },
+      "target": { "id": "fullEmployee" },
+      "id": "flow19",
+      "attrs": {
+        "line": { "stroke": "#27AE60", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } },
+        "label": { "text": "Yes", "fontSize": 10, "fill": "#27AE60" }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "probationExtension" },
+      "target": { "id": "probationPass" },
+      "id": "flow20",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": { "id": "fullEmployee" },
+      "target": { "id": "endEvent" },
+      "id": "flow21",
+      "attrs": {
+        "line": { "stroke": "#2C3E50", "strokeWidth": 2, "targetMarker": { "type": "path", "d": "M 10 -5 0 0 10 5 z" } }
+      }
+    }
+  ]
+}

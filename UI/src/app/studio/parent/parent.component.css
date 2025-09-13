@@ -1,0 +1,1209 @@
+/* 🔵 Header - Top Bar */
+.app-header-top {
+  background-color: #eaf6fb;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header-logo {
+  height: 38px;
+}
+
+/* 🔹 Header - Sub Bar */
+.app-header-sub {
+  background-color: #ffffff;
+  padding: 10px 24px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+}
+
+/* 🔻 Subheader Sections */
+.subheader-left,
+.subheader-center,
+.subheader-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Left aligned */
+.subheader-left {
+  flex: 1;
+  gap: 12px;
+}
+
+/* Center aligned */
+.subheader-center {
+  flex: 2;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Right aligned */
+.subheader-right {
+  flex: 1;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* 🔸 Header Buttons */
+.header-btn {
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.header-btn.editor {
+  background-color: #f43f5e;
+  color: white;
+}
+
+.header-btn.user {
+  background-color: #3b82f6;
+  color: white;
+}
+/* Focus/Active states for header buttons */
+.header-btn:focus,
+.header-btn:active {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af;
+}
+
+.header-btn.editor:focus,
+.header-btn.editor:active {
+  background-color: #fce7f3 !important; /* Light pink for red buttons */
+  color: #be185d;
+}
+
+/* ❔ Help & Icon Buttons */
+.help-btn {
+  background-color: #f43f5e;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.help-btn:focus,
+.help-btn:active {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af;
+}
+
+.icon-button {
+  background: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 4px;
+  transition: all 0.2s ease;
+}
+
+.icon-button img {
+  height: 24px;
+  width: 24px;
+}
+
+.icon-button:hover {
+  background: #f1f3f4;
+}
+.icon-button:focus,
+.icon-button:active {
+  outline: none;
+  background: #dbeafe !important; /* Light blue fill */
+}
+
+
+/* 🌐 Global Layout */
+.app-container { 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px); /* Subtract header height */
+}
+
+.canvas-area {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #f8f9fa;
+  min-width: 0;
+  height: 100%; /* Fill available height */
+}
+
+.canvas-area > app-canvas {
+  flex: 1;
+  height: 100%;
+}
+
+.canvas-area > app-zoom-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .canvas-area {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    font-size: 14px;
+  }
+
+  .main-content {
+    flex-direction: column;
+  }
+
+  .canvas-area > app-zoom-controls {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* 🎚 Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f3f4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dadce0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #bdc1c6;
+}
+
+/* 🎯 Global Focus Styles - Changed to light blue fill */
+*:focus-visible {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+}
+
+button:focus,
+input:focus,
+select:focus {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+}
+
+/* Special handling for buttons that should maintain their original colors */
+button:focus:not(.preserve-color),
+button:active:not(.preserve-color) {
+  background-color: #dbeafe !important;
+  color: #1e40af !important;
+}
+
+/* 🧱 Box Model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 🧩 Tooltip Styling */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px 8px;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.user-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 50%;
+}
+
+.user-pic {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Dropdown Menu (mat-menu override) */
+.profile-dropdown .mat-menu-content {
+  padding: 0 !important;
+  overflow: hidden;
+  width: 280px;
+}
+
+/* Profile Card */
+.profile-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+/* Avatar inside dropdown */
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* Text info */
+.profile-info {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* Link section */
+.profile-links a {
+  color: #0067c5;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+.profile-links a:focus,
+.profile-links a:active {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+  text-decoration: none;
+}
+
+/* Sign out button */
+.signout-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+}
+
+.signout-btn:hover {
+  background-color: #f3f3f3;
+}
+
+.signout-btn:focus,
+.signout-btn:active {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+  border-color: #93c5fd;
+}
+
+::ng-deep .mat-menu-panel {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+}
+.profile-dropdown .mat-menu-content {
+  padding: 0 !important;
+  background-color: #fff !important;
+}
+
+.user-btn:hover .user-pic {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+::ng-deep .mat-menu-panel {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05); /* ✅ subtle outline */
+  overflow: hidden !important;
+}
+
+
+::ng-deep .mat-menu-panel::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+.profile-avatar {
+  background-color: #fff; /* makes sure avatar area is solid white */
+  padding: 8px;
+  border-radius: 50%;
+}
+
+
+/* Optional: subtle arrow for dropdown */
+::ng-deep .mat-menu-panel::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.save-model-dropdown .mat-menu-content {
+  padding: 0 !important;
+  overflow: hidden;
+  width: 300px;
+}
+
+.save-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.save-title {
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+/* .save-form .full-width {
+  width: 100%;
+} */
+
+/* .save-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+} */
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-dialog-container {
+  background: #ffffff; /* solid white */
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  padding: 24px;
+  min-width: 360px;
+  max-width: 420px;
+}
+
+/* .save-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+} */
+
+.full-width {
+  width: 100%;
+}
+
+mat-dialog-actions {
+  margin-top: 16px;
+}
+
+/* 👤 Button Triggering the Dropdown */
+.user-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.user-btn:hover .user-pic {
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.2s ease;
+}
+
+.user-btn:focus,
+.user-btn:focus-visible {
+  outline: none;
+}
+
+/* 🖼 Profile Picture Inside Button */
+.user-pic {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* 📦 Dropdown Container */
+.profile-dropdown .mat-menu-content {
+  padding: 0 !important;
+  background-color: #fff !important;
+  width: 280px;
+  overflow: hidden;
+}
+
+/* 👤 Profile Card */
+.profile-card {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🖼 Avatar Image */
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 8px;
+}
+
+/* 📋 User Info */
+.profile-info {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #555;
+  margin-top: 2px;
+}
+
+/* 🔗 (Optional) Account Links */
+.profile-links a {
+  color: #0067c5;
+  font-size: 13px;
+  text-decoration: none;
+}
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+/* 🚪 Sign Out Button */
+.signout-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.signout-btn:hover {
+  background-color: #f3f3f3;
+}
+
+/* 🔽 Dropdown Arrow Pointer */
+::ng-deep .mat-menu-panel::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔲 Dropdown Panel Styles */
+::ng-deep .mat-menu-panel {
+  background-color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 0 !important;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden !important;
+}
+/* 🔧 Compact Save Form Enhancements */
+/* 🔧 Compact Save Form Enhancements */
+.sketch-form {
+  width: 200px;
+  max-width: 100%;
+  padding: 16px;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  overflow-x: hidden; /* ✅ block horizontal scroll */
+}
+
+.form-title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.field-group.small {
+  max-width: 100px;
+}
+
+.field-group label {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.field-group input,
+.field-group textarea {
+  border: 1px solid #ccc; /* ✅ Softer border */
+  padding: 6px;
+  font-size: 14px;
+  outline: none;
+  resize: none;
+  border-radius: 4px; /* ✅ Rounded input fields */
+  box-sizing: border-box;
+  background-color: #fff;
+    overflow: hidden !important;  /* ✅ Prevent inner scrollbars */
+  height: 60px;                 /* ✅ Fixed height to avoid auto resizing */
+  max-height: 60px;
+}
+
+/* Full-width field */
+.full {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* ==========================
+  ✅ Save Button Styles
+========================== */
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.form-actions button {
+  padding: 6px 20px;
+  background-color: #d6ecf7;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.form-actions button:hover {
+  background-color: #c7e2f7;
+}
+
+/* ==========================
+  ✅ Save Model Dropdown Styles
+========================== */
+.save-model-dropdown .mat-menu-content {
+  padding: 0 !important;
+  overflow: hidden !important;
+  max-width: 100vw;
+  width: auto;
+  box-sizing: border-box;
+}
+
+/* ==========================
+  ✅ Custom Dialog Position
+========================== */
+/* Smaller and neater form */
+.sketch-form {
+  padding: 12px;
+  width: 220px; /* decreased from 250px */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 8px;
+}
+
+/* Title style */
+.form-title {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* Layout for row */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+/* Widen model name */
+.field-group {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push version no to the right */
+.field-group.small {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* Ensure version input doesn't shrink */
+.field-group.small input {
+  width: 100%;
+}
+
+/* Full-width description */
+.field-group.full {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+/* Save button alignment */
+.form-actions {
+  text-align: center;
+}
+
+button[type="submit"] {
+  padding: 6px 16px;
+  background-color: #d9f0fa;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Prevent overflow/cutoff on right */
+::ng-deep .mat-dialog-container.custom-save-dialog {
+  max-width: 280px !important;
+  overflow: visible;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 👇 Add below this */
+button.icon-button[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button.icon-button:not([disabled]) {
+  opacity: 1;
+  color: black;
+}
+/* 🔷 Style the versions dropdown menu */
+/* Version Menu Container */
+.custom-versions-menu {
+  width: 280px;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.version-menu-container {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Current Version Card */
+.current-version-card {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #3f51b5;
+}
+
+.version-title {
+  font-size: 12px;
+  color: #6c757d;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.version-name {
+  font-weight: 600;
+  margin: 6px 0;
+  font-size: 15px;
+  color: #212529;
+}
+
+.version-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.version-number {
+  background: #e9ecef;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Model Selection */
+.model-selection {
+  margin-top: 8px;
+}
+
+.model-selection label {
+  display: block;
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+/* Version List */
+.version-list-container label {
+  display: block;
+  font-size: 12px;
+  color: #6c757d;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.version-scroll-container {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+}
+
+.version-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #e9ecef;
+  transition: background 0.2s;
+}
+
+.version-item:hover {
+  background-color: #f8f9fa;
+}
+
+.version-item-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #212529;
+}
+
+.version-item-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+/* Divider */
+mat-divider {
+  margin: 8px 0;
+}
+.version-entry {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.delete-btn:hover {
+  color: darkred;
+}
+
+
+/* Style for the button with the grid icon */
+button[mat-button] {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #495057;
+  transition: all 0.2s ease;
+  min-height: auto;
+}
+
+button[mat-button]:hover {
+  background-color: #e9ecef;
+  color: #212529;
+  border-color: #dee2e6;
+}
+
+button[mat-button]:focus,
+button[mat-button]:active {
+  outline: none;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+  border-color: #93c5fd;
+}
+
+/* SVG icon styling */
+button[mat-button] svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+/* Remove default Angular Material button styles */
+button[mat-button].mat-button {
+  line-height: normal;
+  min-width: auto;
+}
+
+/* Custom menu panel styling */
+::ng-deep .custom-menu-panel {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  padding: 0 !important;
+  min-width: 200px !important;
+  border: 1px solid #e9ecef !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  overflow: hidden !important;
+}
+
+/* Menu items styling */
+::ng-deep .custom-menu-panel .mat-menu-item {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: #374151 !important;
+  padding: 12px 16px !important;
+  line-height: 1.4 !important;
+  height: auto !important;
+  transition: background-color 0.15s ease !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+  border: none !important;
+  border-bottom: 1px solid #f3f4f6 !important;
+}
+
+/* Remove border from last item */
+::ng-deep .custom-menu-panel .mat-menu-item:last-child {
+  border-bottom: none !important;
+}
+
+::ng-deep .custom-menu-panel .mat-menu-item:hover {
+  background-color: #f9fafb !important;
+  color: #111827 !important;
+}
+
+/* Focus/Active states for menu items - Light blue fill */
+::ng-deep .custom-menu-panel .mat-menu-item:focus,
+::ng-deep .custom-menu-panel .mat-menu-item:active,
+::ng-deep .custom-menu-panel .mat-menu-item.cdk-keyboard-focused,
+::ng-deep .custom-menu-panel .mat-menu-item.cdk-program-focused {
+  outline: none !important;
+  background-color: #dbeafe !important; /* Light blue fill */
+  color: #1e40af !important;
+}
+
+/* Remove default mat-menu styling that might interfere */
+::ng-deep .custom-menu-panel .mat-menu-content {
+  padding: 0 !important;
+}
+
+/* Remove any Angular Material dividers and borders */
+::ng-deep .custom-menu-panel .mat-divider,
+::ng-deep .custom-menu-panel hr {
+  display: none !important;
+}
+
+/* Remove any blue accent colors */
+::ng-deep .custom-menu-panel .mat-menu-item.mat-accent {
+  color: #374151 !important;
+}
+
+::ng-deep .custom-menu-panel .mat-menu-item::before,
+::ng-deep .custom-menu-panel .mat-menu-item::after {
+  display: none !important;
+}
+
+/* Ensure proper menu positioning */
+::ng-deep .mat-menu-panel {
+  max-width: none !important;
+}
+
+/* Remove any ripple effects that might show blue - replace with light blue */
+::ng-deep .custom-menu-panel .mat-menu-item .mat-ripple-element {
+  background-color: rgba(219, 234, 254, 0.5) !important; /* Light blue ripple */
+}
+
+/* Typography refinements */
+::ng-deep .custom-menu-panel {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Ensure menu header if you have one */
+::ng-deep .custom-menu-panel .menu-header {
+  padding: 12px 20px 8px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5f6368;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* For a more iOS-like appearance (optional) */
+::ng-deep .custom-menu-panel {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+
+
+
+.tab-rename-input {
+  font-size: 14px;
+  padding: 2px 6px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  width: 100px;
+}
+.tab-footer-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #f4f4f4;
+  border-top: 1px solid #ccc;
+  z-index: 100;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.footer-tab-group {
+  height: 35px;
+  min-height: 37px;
+}
+.custom-footer-tabs .mat-tab-labels {
+  height: 35px;
+  border-top: 1px solid #ccc;
+  background-color: #e0e0e0;
+  padding-left: 0 !important; /* remove default gap */
+  margin-left: 0 !important;
+}
+
+.footer-tab-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 4px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+  background-color: #e0e0e0;
+  min-width: 250px; /* wider tabs */
+  position: relative;
+  margin-right: 1px; /* spacing between tabs */
+  border-top: 4px solid transparent; /* space for colored top border */
+}
+
+.footer-tab-label.selected {
+  background-color: #ffffff;
+  border-top: 4px solid orange; /* orange header */
+  font-weight: 500;
+}
+
+.tab-pin-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.tab-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
+.tab-close-btn {
+  margin-left: auto;
+  width: 10px;
+  height: 20px;
+  min-width: 20px;
+  line-height: 20px;
+  border-radius: 40%;
+  font-size: 10px;
+  padding: 0;
+  color: #444;
+}
+
+.tab-close-btn:hover {
+  background-color: #e57373;
+  color: white;
+}
+.custom-footer-tabs .mat-tab-header {
+  display: flex !important;
+  justify-content: flex-start !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  left: 0 !important;
+}
+
+.custom-footer-tabs .mat-tab-list {
+  transform: none !important;
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+.custom-footer-tabs .mat-tab-label-container {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+  scroll-padding-left: 0 !important;
+}
+
+.custom-footer-tabs .mat-tab-label:first-child {
+  margin-left: 0 !important;
+}
+
+.custom-footer-tabs .mat-tab-header-pagination {
+  display: none !important;
+}
+
+/* Prevent the first menu from being affected by toolbar styles */
+.tab-context-menu {
+  padding: 0;
+  min-width: 120px;
+}
+
+/* Specific styling only for the toolbar menu */
+.toolbar-menu {
+  min-width: 160px;
+}
+

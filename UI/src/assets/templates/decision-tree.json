@@ -1,0 +1,414 @@
+{
+  "cells": [
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 580,
+        "y": 60
+      },
+      "angle": 0,
+      "id": "home",
+      "label": "HOME"
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "attrs": {},
+      "position": {
+        "x": 150,
+        "y": 150
+      },
+      "angle": 0,
+      "id": "about",
+      "label": "About Us"
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "attrs": {},
+      "position": {
+        "x": 400,
+        "y": 150
+      },
+      "angle": 0,
+      "id": "services",
+      "label": "Services"
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "attrs": {},
+      "position": {
+        "x": 650,
+        "y": 150
+      },
+      "angle": 0,
+      "id": "products",
+      "label": "Products"
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {
+        "width": 120,
+        "height": 100
+      },
+      "attrs": {
+        "body": {
+          "strokeWidth": 2
+        }
+      },
+      "position": {
+        "x": 900,
+        "y": 150
+      },
+      "angle": 0,
+      "id": "contact",
+      "label": "Contact Us"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 50,
+        "y": 250
+      },
+      "angle": 0,
+      "id": "mission",
+      "label": "Mission"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 140,
+        "y": 300
+      },
+      "angle": 0,
+      "id": "ourStory",
+      "label": "Our Story"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 240,
+        "y": 320
+      },
+      "angle": 0,
+      "id": "vision",
+      "label": "Vision"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 140,
+        "y": 400
+      },
+      "angle": 0,
+      "id": "ourTeam",
+      "label": "Our Team"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 300,
+        "y": 250
+      },
+      "angle": 0,
+      "id": "service1",
+      "label": "Service 1"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 500,
+        "y": 300
+      },
+      "angle": 0,
+      "id": "service2",
+      "label": "Service 2"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 600,
+        "y": 300
+      },
+      "angle": 0,
+      "id": "product1",
+      "label": "Product 1"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 700,
+        "y": 300
+      },
+      "angle": 0,
+      "id": "product2",
+      "label": "Product 2"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 800,
+        "y": 250
+      },
+      "angle": 0,
+      "id": "product3",
+      "label": "Product 3"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 700,
+        "y": 380
+      },
+      "angle": 0,
+      "id": "social",
+      "label": "Social media"
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {
+        "width": 40,
+        "height": 40
+      },
+      "attrs": {},
+      "position": {
+        "x": 900,
+        "y": 280
+      },
+      "angle": 0,
+      "id": "email",
+      "label": "Email Form Submission"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "home"
+      },
+      "target": {
+        "id": "about"
+      },
+      "id": "_26ab56b4-70aa-40b6-be25-364bb2279306"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "home"
+      },
+      "target": {
+        "id": "services"
+      },
+      "id": "_3254334e-4d4d-4ba6-89a4-c191fbf826fb"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "home"
+      },
+      "target": {
+        "id": "products"
+      },
+      "id": "_a24232af-e3ad-4fe2-bd73-24594bdb9eea"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "home"
+      },
+      "target": {
+        "id": "contact"
+      },
+      "id": "_1b737311-3219-4858-8a27-4a9a2035785a"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "about"
+      },
+      "target": {
+        "id": "mission"
+      },
+      "id": "_979a7810-c419-4f68-843e-58807ec1997c"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "about"
+      },
+      "target": {
+        "id": "ourStory"
+      },
+      "id": "_ba58ba7c-78c1-4975-9290-6c1e32ec74e8"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "about"
+      },
+      "target": {
+        "id": "vision"
+      },
+      "id": "_24043234-19db-40ef-9af5-902d9dd62735"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "ourStory"
+      },
+      "target": {
+        "id": "ourTeam"
+      },
+      "id": "_6f4063e8-ee92-416b-9d45-098328bb4a8f"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "services"
+      },
+      "target": {
+        "id": "service1"
+      },
+      "id": "_977cf667-806c-4dda-8811-1239609ffe33"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "services"
+      },
+      "target": {
+        "id": "service2"
+      },
+      "id": "_e5510369-c84d-489e-ad9d-b03d92d8f239"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "products"
+      },
+      "target": {
+        "id": "product1"
+      },
+      "id": "_8f422251-4fe9-4987-91c9-e9ab9c88c4e5"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "products"
+      },
+      "target": {
+        "id": "product2"
+      },
+      "id": "_3dfeb8af-ba82-47f9-bbb9-99f7d0ea2f95"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "products"
+      },
+      "target": {
+        "id": "product3"
+      },
+      "id": "_96aecf9b-2c55-4416-a1e1-158bfe6a5cfd"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "product2"
+      },
+      "target": {
+        "id": "social"
+      },
+      "id": "_e0f5c9a3-9b73-4116-88e7-8a97a69b1bf5"
+    },
+    {
+      "type": "bpmn2.Flow",
+      "attrs": {},
+      "source": {
+        "id": "contact"
+      },
+      "target": {
+        "id": "email"
+      },
+      "id": "_99850d7f-fa02-494a-8ac2-e76d7dc4e6ea"
+    }
+  ],
+  "type": "bpmn"
+}

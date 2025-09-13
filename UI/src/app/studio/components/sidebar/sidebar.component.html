@@ -1,0 +1,47 @@
+<div class="left-panel">
+  <div class="panel-section">
+    <div class="panel-header" (click)="toggleShapeCategory(shapeCategories[0])">
+      <span class="panel-title">Shapes</span>
+      <span class="expand-icon" [class.expanded]="shapeCategories[0].expanded">▼</span>
+    </div>
+    <div class="shapes-container" [class.collapsed]="!shapeCategories[0].expanded">
+      
+      <!-- BASIC SHAPES SECTION -->
+      <div class="shape-subsection">
+        <div class="subsection-header" (click)="toggleBasicShapes()">
+          <span class="subsection-title">Basic Shapes</span>
+          <span class="expand-icon" [class.expanded]="basicShapesExpanded">▼</span>
+        </div>
+        <div class="basic-shapes-container" [class.collapsed]="!basicShapesExpanded">
+          <div #basicStencil class="stencil basic"></div>
+        </div>
+      </div>
+
+      <!-- ADVANCED SHAPES SECTION -->
+      <div class="shape-subsection">
+        <div class="subsection-header" (click)="toggleAdvancedShapes()">
+          <span class="subsection-title">Advanced Shapes</span>
+          <span class="expand-icon" [class.expanded]="advancedShapesExpanded">▼</span>
+        </div>
+        <div class="advanced-shapes-container" [class.collapsed]="!advancedShapesExpanded">
+          <div #advancedStencil class="stencil advanced"></div>
+        </div>
+      </div>
+     
+      <!-- ARROW SECTION -->
+      <div class="arrow-section">
+        <div class="arrow-title">Connect Shapes</div>
+        <div class="arrow-box"
+             (click)="toggleArrowMode()"
+             [class.active]="arrowMode"
+             title="Click to connect shapes with arrows">
+          <div class="arrow-icon">→</div>
+          <div class="arrow-label">Arrow</div>
+        </div>
+        <div class="arrow-instruction" *ngIf="arrowMode">
+          Click two shapes to connect
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

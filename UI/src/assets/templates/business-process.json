@@ -1,0 +1,367 @@
+{
+  "type": "bpmn",
+  "cells": [
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 50, "y": 190},
+      "angle": 0,
+      "id": "start-event",
+      "z": 1,
+      "attrs": {
+        "background": {"fill": "#ffffff"},
+        "border": {"borderType": "thin", "stroke": "#2c3e50", "strokeWidth": 2},
+        "label": {"text": "Application Received", "fontSize": 12, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Gateway",
+      "size": {"width": 58, "height": 58},
+      "position": {"x": 150, "y": 161},
+      "angle": 0,
+      "id": "completeness-check-gateway",
+      "z": 2,
+      "attrs": {
+        "body": {"fill": "#f39c12", "stroke": "#e67e22", "strokeWidth": 2},
+        "icon": {"iconType": "exclusive"},
+        "label": {"text": "Application Complete?", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "start-event"},
+      "target": {"id": "completeness-check-gateway"},
+      "id": "flow-1",
+      "z": 3,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {"width": 120, "height": 80},
+      "position": {"x": 280, "y": 150},
+      "angle": 0,
+      "id": "request-additional-information",
+      "z": 4,
+      "attrs": {
+        "background": {"fill": "#3498db", "stroke": "#2980b9", "strokeWidth": 2},
+        "icon": {"iconType": "service"},
+        "label": {"text": "Request Additional Information", "fontSize": 11, "fontFamily": "Arial", "fill": "#ffffff"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "completeness-check-gateway"},
+      "target": {"id": "request-additional-information"},
+      "id": "flow-2",
+      "z": 5,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "No", "fontSize": 10, "fontFamily": "Arial", "fill": "#e74c3c"}
+      }
+    },
+    {
+      "type": "bpmn2.Gateway",
+      "size": {"width": 58, "height": 58},
+      "position": {"x": 450, "y": 161},
+      "angle": 0,
+      "id": "validation-gateway",
+      "z": 6,
+      "attrs": {
+        "body": {"fill": "#f39c12", "stroke": "#e67e22", "strokeWidth": 2},
+        "icon": {"iconType": "exclusive"},
+        "label": {"text": "Information Valid?", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "request-additional-information"},
+      "target": {"id": "validation-gateway"},
+      "id": "flow-3",
+      "z": 7,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {"width": 120, "height": 80},
+      "position": {"x": 570, "y": 40},
+      "angle": 0,
+      "id": "notify-client-rejection",
+      "z": 8,
+      "attrs": {
+        "background": {"fill": "#e74c3c", "stroke": "#c0392b", "strokeWidth": 2},
+        "icon": {"iconType": "manual"},
+        "label": {"text": "Notify Client of Rejection", "fontSize": 11, "fontFamily": "Arial", "fill": "#ffffff"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "validation-gateway"},
+      "target": {"id": "notify-client-rejection"},
+      "id": "flow-4",
+      "z": 9,
+      "vertices": [{"x": 479, "y": 80}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Invalid", "fontSize": 10, "fontFamily": "Arial", "fill": "#e74c3c"}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 750, "y": 60},
+      "angle": 0,
+      "id": "application-rejected-event",
+      "z": 10,
+      "attrs": {
+        "background": {"fill": "#e74c3c"},
+        "border": {"borderType": "thick", "stroke": "#c0392b", "strokeWidth": 3},
+        "label": {"text": "Application Rejected", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "notify-client-rejection"},
+      "target": {"id": "application-rejected-event"},
+      "id": "flow-5",
+      "z": 11,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {"width": 120, "height": 80},
+      "position": {"x": 570, "y": 200},
+      "angle": 0,
+      "id": "process-application",
+      "z": 12,
+      "attrs": {
+        "background": {"fill": "#27ae60", "stroke": "#229954", "strokeWidth": 2},
+        "icon": {"iconType": "service"},
+        "label": {"text": "Process Application", "fontSize": 11, "fontFamily": "Arial", "fill": "#ffffff"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "validation-gateway"},
+      "target": {"id": "process-application"},
+      "id": "flow-6",
+      "z": 13,
+      "vertices": [{"x": 479, "y": 240}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Valid", "fontSize": 10, "fontFamily": "Arial", "fill": "#27ae60"}
+      }
+    },
+    {
+      "type": "bpmn2.Gateway",
+      "size": {"width": 58, "height": 58},
+      "position": {"x": 750, "y": 211},
+      "angle": 0,
+      "id": "final-decision-gateway",
+      "z": 14,
+      "attrs": {
+        "body": {"fill": "#9b59b6", "stroke": "#8e44ad", "strokeWidth": 2},
+        "icon": {"iconType": "exclusive"},
+        "label": {"text": "Final Decision", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "process-application"},
+      "target": {"id": "final-decision-gateway"},
+      "id": "flow-7",
+      "z": 15,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 900, "y": 160},
+      "angle": 0,
+      "id": "application-approved-event",
+      "z": 16,
+      "attrs": {
+        "background": {"fill": "#27ae60"},
+        "border": {"borderType": "thick", "stroke": "#229954", "strokeWidth": 3},
+        "label": {"text": "Application Approved", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "final-decision-gateway"},
+      "target": {"id": "application-approved-event"},
+      "id": "flow-8",
+      "z": 17,
+      "vertices": [{"x": 779, "y": 180}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Approve", "fontSize": 10, "fontFamily": "Arial", "fill": "#27ae60"}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 900, "y": 260},
+      "angle": 0,
+      "id": "application-denied-event",
+      "z": 18,
+      "attrs": {
+        "background": {"fill": "#e74c3c"},
+        "border": {"borderType": "thick", "stroke": "#c0392b", "strokeWidth": 3},
+        "label": {"text": "Application Denied", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "final-decision-gateway"},
+      "target": {"id": "application-denied-event"},
+      "id": "flow-9",
+      "z": 19,
+      "vertices": [{"x": 779, "y": 280}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Deny", "fontSize": 10, "fontFamily": "Arial", "fill": "#e74c3c"}
+      }
+    },
+    {
+      "type": "bpmn2.Activity",
+      "size": {"width": 120, "height": 80},
+      "position": {"x": 280, "y": 280},
+      "angle": 0,
+      "id": "create-application-record",
+      "z": 20,
+      "attrs": {
+        "background": {"fill": "#3498db", "stroke": "#2980b9", "strokeWidth": 2},
+        "icon": {"iconType": "service"},
+        "label": {"text": "Create Application Record", "fontSize": 11, "fontFamily": "Arial", "fill": "#ffffff"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "completeness-check-gateway"},
+      "target": {"id": "create-application-record"},
+      "id": "flow-10",
+      "z": 21,
+      "vertices": [{"x": 179, "y": 320}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Yes", "fontSize": 10, "fontFamily": "Arial", "fill": "#27ae60"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "create-application-record"},
+      "target": {"id": "process-application"},
+      "id": "flow-11",
+      "z": 22,
+      "vertices": [{"x": 520, "y": 320}, {"x": 520, "y": 240}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.DataObject",
+      "size": {"width": 48, "height": 65},
+      "position": {"x": 150, "y": 380},
+      "angle": 0,
+      "id": "application-data",
+      "z": 23,
+      "attrs": {
+        "body": {"fill": "#ecf0f1", "stroke": "#bdc3c7", "strokeWidth": 2},
+        "label": {"text": "Application Data", "fontSize": 10, "fontFamily": "Arial", "fill": "#2c3e50"},
+        "dataTypeIcon": {"iconType": "input"}
+      }
+    },
+    {
+      "type": "bpmn2.DataAssociation",
+      "source": {"id": "application-data"},
+      "target": {"id": "create-application-record"},
+      "id": "data-flow-1",
+      "z": 24,
+      "attrs": {
+        "line": {"stroke": "#95a5a6", "strokeWidth": 1, "strokeDasharray": "5,5"}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 900, "y": 360},
+      "angle": 0,
+      "id": "generate-invoice-event",
+      "z": 25,
+      "attrs": {
+        "background": {"fill": "#f39c12"},
+        "border": {"borderType": "thick", "stroke": "#e67e22", "strokeWidth": 3},
+        "label": {"text": "Generate Invoice", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "final-decision-gateway"},
+      "target": {"id": "generate-invoice-event"},
+      "id": "flow-12",
+      "z": 26,
+      "vertices": [{"x": 779, "y": 380}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2},
+        "label": {"text": "Invoice Required", "fontSize": 10, "fontFamily": "Arial", "fill": "#f39c12"}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 1050, "y": 380},
+      "angle": 0,
+      "id": "payment-received-event",
+      "z": 27,
+      "attrs": {
+        "background": {"fill": "#27ae60"},
+        "border": {"borderType": "double", "stroke": "#229954", "strokeWidth": 3},
+        "icon": {"iconType": "message"},
+        "label": {"text": "Payment Received", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "generate-invoice-event"},
+      "target": {"id": "payment-received-event"},
+      "id": "flow-13",
+      "z": 28,
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    },
+    {
+      "type": "bpmn2.Event",
+      "size": {"width": 40, "height": 40},
+      "position": {"x": 800, "y": 140},
+      "angle": 0,
+      "id": "timer-48-hours",
+      "z": 29,
+      "attrs": {
+        "background": {"fill": "#f39c12"},
+        "border": {"borderType": "double", "stroke": "#e67e22", "strokeWidth": 2},
+        "icon": {"iconType": "timer"},
+        "label": {"text": "48 Hours", "fontSize": 11, "fontFamily": "Arial", "fill": "#2c3e50"}
+      }
+    },
+    {
+      "type": "bpmn2.Flow",
+      "source": {"id": "notify-client-rejection"},
+      "target": {"id": "timer-48-hours"},
+      "id": "flow-14",
+      "z": 30,
+      "vertices": [{"x": 720, "y": 100}],
+      "attrs": {
+        "line": {"stroke": "#34495e", "strokeWidth": 2}
+      }
+    }
+  ]
+}

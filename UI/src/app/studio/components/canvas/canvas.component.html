@@ -1,0 +1,24 @@
+    <div #canvas class="canvas-container">
+      <div #paperContainer class="paper-container">
+        <div #paperHost class="paper-host"></div>
+      </div>
+
+      <!-- ✅ ADD: Resize Controls -->
+
+      <!-- Drop Indicator -->
+      <div class="drop-indicator"
+          [class.active]="isDragOver"
+          [style.left.px]="dropIndicatorPosition.x - 40"
+          [style.top.px]="dropIndicatorPosition.y - 30"
+          *ngIf="isDragOver">
+        <div class="drop-preview">
+          <span class="drop-text">Drop here</span>
+        </div>
+      </div>
+
+      <!-- Arrow Mode -->
+      <div class="arrow-indicator" *ngIf="arrowMode">
+        <span *ngIf="!firstShape">🔗 Click first shape to start arrow</span>
+        <span *ngIf="firstShape">🔗 Click second shape to complete arrow</span>
+      </div>
+    </div>
